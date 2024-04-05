@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="pesan.js"></script>
+  </head>
+  <body class="bg-gray-200 flex items-center justify-center h-screen">
+    <div
+      class="flex flex-col h-[720px] w-full max-w-md bg-white shadow-lg rounded-lg"
+    >
+      <!-- Headernya -->
+      <div class="p-4 bg-white flex items-center justify-between border-b">
+        <div class="flex items-center">
+          <button id="backButton" class="text-gray-600">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M8 4L5 7l3 3" />
+                <circle cx="7" cy="7" r="6.5" />
+              </g>
+            </svg>
+          </button>
+          <h1 class="font-semibold text-lg ml-2">Memet Park</h1>
+        </div>
+        <button
+          id="clearChat"
+          class="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 transition duration-300"
+        >
+          X
+        </button>
+      </div>
+      <!-- Box Pesan -->
+      <div id="messageArea" class="h-600px flex-1 p-4 overflow-y-auto"></div>
+
+      <!-- Footer       -->
+      <div class="p-4 bg-white flex items-center border-t">
+        <button id="attachmentButton" class="text-gray-600">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h9v5h2v2h5v9q0 .825-.587 1.413T19 21zm1-4h12l-3.75-5l-3 4L9 13zm11-8V7h-2V5h2V3h2v2h2v2h-2v2z"
+            />
+          </svg>
+        </button>
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Send message..."
+          class="flex-1 border rounded p-2 mr-2"
+        />
+        <button id="sendButton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 14 14"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 7h6M8.5 5.5L10 7L8.5 8.5" />
+              <circle cx="7" cy="7" r="6.5" />
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
